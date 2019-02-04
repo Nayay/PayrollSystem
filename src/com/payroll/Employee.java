@@ -1,9 +1,15 @@
 package com.payroll;
 
-public abstract class Employee {
+public abstract class Employee implements IPrintable {
 	private String name;
 	private int age;
 	
+	
+	 public Employee(String name, int age) {
+	        this.name=name;
+	        this.age=age;
+	    }
+	 
 	public String getName() {
 		return name;
 	}
@@ -25,6 +31,9 @@ public abstract class Employee {
 		
 	}
 	
-	
+	@Override
+    public String printMyData() {
+        return "Employee Name: "+getName()+"\n"+"Employee Age"+getAge();
+    }
 
 }
