@@ -5,7 +5,17 @@ public class Intern extends Employee {
     private double earnings;
     private Vehicle vehicle;
 
-    public Intern(String name, int age, String schoolName,Vehicle vehicle) {
+    public Vehicle getVehicle() {
+		return vehicle;
+	}
+
+
+	public void setVehicle(Vehicle vehicle) {
+		this.vehicle = vehicle;
+	}
+
+
+	public Intern(String name, int age, String schoolName,Vehicle vehicle) {
         super(name, age, vehicle);
         this.schoolName = schoolName;
         // TODO Auto-generated constructor stub
@@ -27,11 +37,30 @@ public class Intern extends Employee {
     public void setSchoolName(String schoolName) {
         this.schoolName = schoolName;
     }
-
+    private void checkVehicle(StringBuilder stringBuilder) {
+        if (vehicle == null) {
+            stringBuilder.append("Employee has no vehicle registerd");
+        } else if (vehicle instanceof Car) {
+            stringBuilder.append("Employee has a Car\n")
+                    .append(" -Make: ").append(getVehicle().getMake())
+                    .append("\n -Plate: ").append(getVehicle().getPlate())
+                    .append("\n -Color: ").append(getVehicle().getColor())
+                    .append("\n -Distance Travelled: ").append(((Car)getVehicle()).getDistanceTravelled())
+                    .append("\n -Capacity: ").append(((Car)getVehicle()).getCapacity());
+                    
+        	} else if (vehicle instanceof Motorcycle) {
+            stringBuilder.append("Employee has a MotorCycle\n")
+                    .append(" -Make: ").append(getVehicle().getMake())
+                    .append("\n -Plate: ").append(getVehicle().getPlate())
+                    .append("\n -Color: ").append(getVehicle().getColor())
+                    .append("\n -Distance Travelled: ").append(((Motorcycle)getVehicle()).getDistanceTravelled())
+                    ;
+        }
+    }
 
     @Override
     public String printMyData() {
-        return "Employee Name " + getName() + "Age " + getAge() + "Intern School Name" + schoolName;
+        return this.toString();
     }
 
     @Override
@@ -40,8 +69,11 @@ public class Intern extends Employee {
         stringBuilder.append("Name: " + getName() + "\n" + "Age: " + getAge() + "\n");
         stringBuilder.append("Employee is Intern")
                 .append("\n -School name: " + getSchoolName())
-                .append("\n -Earnings: " + calcEarnings());
+                .append("\n -Earnings: " + calcEarnings()+ "\n");
+    			checkVehicle(stringBuilder);
         return String.valueOf(stringBuilder);
     }
+    
+    
 
 }

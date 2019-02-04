@@ -8,7 +8,8 @@ public class FullTime extends Employee {
 	private double salary;
 	private double bonus;
 	 private Vehicle vehicle;
-	public Vehicle getVehicle() {
+	
+	 public Vehicle getVehicle() {
 		return vehicle;
 	}
 
@@ -91,7 +92,7 @@ public class FullTime extends Employee {
 				.append(getBonus())
 				.append("\n -Earnings ")
 				.append(calcEarnings())
-				.append(" (").append(getSalary()).append(" + ").append(getBonus()).append(")");
+				.append(" (").append(getSalary()).append(" + ").append(getBonus()).append(")"+ "\n");
 		
 		checkVehicle(stringBuilder);
 		return String.valueOf(stringBuilder);
