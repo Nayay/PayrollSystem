@@ -1,14 +1,22 @@
 package com.payroll;
 
-public class Car {
-	private String milage;
-	private String capacity;
+public class Car extends Vehicle {
 	
-	public String getMilage() {
-		return milage;
+	private Double distanceTravelled;
+	private String capacity;
+	public Car(String make, String color, String plate, Double distanceTravelled, String capacity) {
+		super(make, color, plate);
+		this.distanceTravelled=distanceTravelled;
+		this.capacity=capacity;
+		// TODO Auto-generated constructor stub
 	}
-	public void setMilage(String milage) {
-		this.milage = milage;
+	
+	
+	public Double getDistanceTravelled() {
+		return distanceTravelled;
+	}
+	public void setDistanceTravelled(Double distanceTravelled) {
+		this.distanceTravelled = distanceTravelled;
 	}
 	public String getCapacity() {
 		return capacity;
@@ -17,6 +25,11 @@ public class Car {
 		this.capacity = capacity;
 	}
 	
+	//Implement IDisplay Later
+
+   
+	
+
 	
 
 }
