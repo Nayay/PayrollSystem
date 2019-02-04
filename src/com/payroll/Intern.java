@@ -3,10 +3,10 @@ package com.payroll;
 public class Intern extends Employee {
     private String schoolName;
     private double earnings;
+    private Vehicle vehicle;
 
-
-    public Intern(String name, int age, String schoolName) {
-        super(name, age);
+    public Intern(String name, int age, String schoolName,Vehicle vehicle) {
+        super(name, age, vehicle);
         this.schoolName = schoolName;
         // TODO Auto-generated constructor stub
     }

@@ -1,14 +1,28 @@
 package com.payroll;
 
+import com.payroll.Vehicle;
+
+
+
 public class FullTime extends Employee {
 	private double salary;
 	private double bonus;
+	 private Vehicle vehicle;
+	public Vehicle getVehicle() {
+		return vehicle;
+	}
 
-	public FullTime(String name, int age, double salary,double bonus) {
-		super(name, age);
+
+	public void setVehicle(Vehicle vehicle) {
+		this.vehicle = vehicle;
+	}
+
+
+	public FullTime(String name, int age, double salary,double bonus,Vehicle vehicle) {
+		super(name, age,vehicle);
 		this.salary=salary;
 		this.bonus=bonus;
-		// TODO Auto-generated constructor stub
+		 setVehicle(vehicle);		// TODO Auto-generated constructor stub
 	}
 
 
@@ -28,6 +42,35 @@ public class FullTime extends Employee {
 		this.bonus = bonus;
 	}
 
+	
+	//Vehicle block
+
+    private void checkTypeOfVehicle(StringBuilder stringBuilder) {
+        if (vehicle == null) {
+            stringBuilder.append("Employee has no vehicle registerd");
+        } else if (vehicle instanceof Car) {
+            stringBuilder.append("Employee has a Car\n")
+                    .append(" -Make: ").append(getVehicle().getMake())
+                    .append("\n -Plate: ").append(getVehicle().getPlate())
+                    .append("\n -Color: ").append(getVehicle().getColor())
+                    .append("\n -Distance Travelled: ").append(((Car)getVehicle()).getDistanceTravelled())
+                    .append("\n -Capacity: ").append(((Car)getVehicle()).getCapacity());
+                    
+        	} else if (vehicle instanceof Motorcycle) {
+            stringBuilder.append("Employee has a MotorCycle\n")
+                    .append(" -Make: ").append(getVehicle().getMake())
+                    .append("\n -Plate: ").append(getVehicle().getPlate())
+                    .append("\n -Color: ").append(getVehicle().getColor())
+                    .append("\n -Distance Travelled: ").append(((Motorcycle)getVehicle()).getDistanceTravelled())
+                    ;
+        }
+    }
+	
+	
+	
+	
+	
+	
 	@Override
 	public double calcEarnings(){
 		return getSalary()+getBonus();

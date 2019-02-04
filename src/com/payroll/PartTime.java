@@ -1,13 +1,13 @@
 package com.payroll;
 
-
+import com.payroll.Vehicle;
 
 public abstract class PartTime extends Employee {
 	private double rate;
 	private float hoursWorked;
 	//Add vehicle later
-	public PartTime(String name, int age,float rate,float hoursWorked){
-	        super(name,age);
+	public PartTime(String name, int age,float rate,float hoursWorked,Vehicle vehicle){
+	        super(name,age,vehicle);
 	        this.rate=rate;
 	        this.hoursWorked=hoursWorked;
 	}
@@ -27,4 +27,5 @@ public abstract class PartTime extends Employee {
 	    public String printMyData() {
 	        return super.printMyData();
 	    }
+
 }

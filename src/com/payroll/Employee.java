@@ -1,15 +1,16 @@
 package com.payroll;
 
+
+
 public abstract class Employee implements IPrintable {
 	private String name;
 	private int age;
-	private double earnings;
-
-
-
-	public Employee(String name, int age) {
+	private Vehicle vehicle;
+	
+	 public Employee(String name, int age, Vehicle vehicle) {
 	        this.name=name;
 	        this.age=age;
+	        setVehicle(vehicle);
 	    }
 	 
 	public String getName() {
@@ -28,19 +29,17 @@ public abstract class Employee implements IPrintable {
 		return age;
 		
 	}
-	public double calcEarnings()
-	{
-		this.earnings=1000;
-	return earnings;
+	public double calcEarnings(){
+		return age;
+		
+	}
+	 public Vehicle getVehicle() {
+	        return vehicle;
+	    }
 
-	}
-	public double getEarnings() {
-		return earnings;
-	}
-
-	public void setEarnings(double earnings) {
-		this.earnings = earnings;
-	}
+	 public void setVehicle(Vehicle vehicle) {
+	        this.vehicle = vehicle;
+	   }
 	
 	@Override
     public String printMyData() {
