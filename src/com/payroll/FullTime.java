@@ -45,7 +45,7 @@ public class FullTime extends Employee {
 	
 	//Vehicle block
 
-    private void checkTypeOfVehicle(StringBuilder stringBuilder) {
+    private void checkVehicle(StringBuilder stringBuilder) {
         if (vehicle == null) {
             stringBuilder.append("Employee has no vehicle registerd");
         } else if (vehicle instanceof Car) {
@@ -92,6 +92,8 @@ public class FullTime extends Employee {
 				.append("\n -Earnings ")
 				.append(calcEarnings())
 				.append(" (").append(getSalary()).append(" + ").append(getBonus()).append(")");
+		
+		checkVehicle(stringBuilder);
 		return String.valueOf(stringBuilder);
 	}
 
