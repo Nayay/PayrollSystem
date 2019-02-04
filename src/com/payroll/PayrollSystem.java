@@ -10,9 +10,12 @@ public class PayrollSystem {
     	 CommissionBasedPartTime commissionBasedPartTime= new CommissionBasedPartTime("Nayay", 24, 20.0f,5.0f, 10);
     	 FixedBasedPartTime fixedBased=new FixedBasedPartTime("Jot",22,20.0f,9.0f,300);
     	 Intern intern=new Intern("Aman",21,"Lambton College");
+    	 FullTime fullTime=new FullTime("Nayay",26,2200,1000);
     	 ArrayList<Employee> employeeArrayList= new ArrayList<>();
         // employeeArrayList.add(commissionBasedPartTime);
+         employeeArrayList.add(intern);
          employeeArrayList.add(fixedBased);
+         employeeArrayList.add(fullTime);
          for (Employee e: employeeArrayList) {
        	  System.out.println(e);
          }
