@@ -3,9 +3,11 @@ package com.payroll;
 public abstract class Employee implements IPrintable {
 	private String name;
 	private int age;
-	
-	
-	 public Employee(String name, int age) {
+	private double earnings;
+
+
+
+	public Employee(String name, int age) {
 	        this.name=name;
 	        this.age=age;
 	    }
@@ -26,9 +28,18 @@ public abstract class Employee implements IPrintable {
 		return age;
 		
 	}
-	public double calcEarnings(){
-		return age;
-		
+	public double calcEarnings()
+	{
+		this.earnings=1000;
+	return earnings;
+
+	}
+	public double getEarnings() {
+		return earnings;
+	}
+
+	public void setEarnings(double earnings) {
+		this.earnings = earnings;
 	}
 	
 	@Override
