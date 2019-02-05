@@ -6,8 +6,18 @@ public abstract class Employee implements IPrintable {
 	private String name;
 	private int age;
 	private Vehicle vehicle;
+	private double earnings;
 	
-	 public Employee(String name, int age, Vehicle vehicle) {
+	
+	 public double getEarnings() {
+		return earnings;
+	}
+
+	public void setEarnings(double earnings) {
+		this.earnings = earnings;
+	}
+
+	public Employee(String name, int age, Vehicle vehicle) {
 	        this.name=name;
 	        this.age=age;
 	        setVehicle(vehicle);
@@ -30,7 +40,7 @@ public abstract class Employee implements IPrintable {
 		
 	}
 	public double calcEarnings(){
-		return age;
+	return this.earnings=1000;
 		
 	}
 	 public Vehicle getVehicle() {

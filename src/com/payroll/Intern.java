@@ -37,6 +37,8 @@ public class Intern extends Employee {
     public void setSchoolName(String schoolName) {
         this.schoolName = schoolName;
     }
+    
+   
     private void checkVehicle(StringBuilder stringBuilder) {
         if (vehicle == null) {
             stringBuilder.append("Employee has no vehicle registerd");
