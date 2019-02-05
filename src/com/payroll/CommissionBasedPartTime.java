@@ -85,7 +85,7 @@ public class CommissionBasedPartTime extends PartTime {
 	@Override
 	public String toString() {
 		StringBuilder stringBuilder = new StringBuilder();
-		stringBuilder.append("Name: " + getName() + "\n" + "Year of Birth: " + getAge() + "\n");
+		stringBuilder.append("Name: " + getName() + "\n" + "Age: " + getAge() + "\n");
 		stringBuilder.append("Employee is PartTime/ Comissioned")
 				.append("\n -Rate: " + getRate())
 				.append("\n -Hours Worked: " + getHoursWorked())
