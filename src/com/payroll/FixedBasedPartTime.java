@@ -27,6 +27,28 @@ public class FixedBasedPartTime extends PartTime {
       
       //(rate*hoursWorked)+FixedAmount
    }
+ //Vehicle block
+
+   private void checkVehicle(StringBuilder stringBuilder) {
+       if (vehicle == null) {
+           stringBuilder.append("Employee has no vehicle registerd");
+       } else if (vehicle instanceof Car) {
+           stringBuilder.append("Employee has a Car\n")
+                   .append(" -Make: ").append(getVehicle().getMake())
+                   .append("\n -Plate: ").append(getVehicle().getPlate())
+                   .append("\n -Color: ").append(getVehicle().getColor())
+                   .append("\n -Distance Travelled: ").append(((Car)getVehicle()).getDistanceTravelled())
+                   .append("\n -Capacity: ").append(((Car)getVehicle()).getCapacity());
+                   
+       	} else if (vehicle instanceof Motorcycle) {
+           stringBuilder.append("Employee has a MotorCycle\n")
+                   .append(" -Make: ").append(getVehicle().getMake())
+                   .append("\n -Plate: ").append(getVehicle().getPlate())
+                   .append("\n -Color: ").append(getVehicle().getColor())
+                   .append("\n -Distance Travelled: ").append(((Motorcycle)getVehicle()).getDistanceTravelled())
+                   ;
+       }
+   }
    
    @Override
     public String printMyData() {
@@ -42,7 +64,8 @@ public class FixedBasedPartTime extends PartTime {
                    .append("\n -Hours Worked: " + getHoursWorked())
                    .append("\n -Fixed amount: " + getFixedAmount())
                    .append("\n -Earnings: " + calcEarnings())
-                   .append("(" + getHoursWorked() * getRate() + " + " + getFixedAmount()+")");
+                   .append("(" + getHoursWorked() * getRate() + " + " + getFixedAmount()+")"+"\n");
+           checkVehicle(stringBuilder);
            return String.valueOf(stringBuilder);
        }
 }
