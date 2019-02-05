@@ -64,7 +64,7 @@ public class CommissionBasedPartTime extends PartTime {
 
     private void checkVehicle(StringBuilder stringBuilder) {
         if (vehicle == null) {
-            stringBuilder.append("Employee has no vehicle registerd");
+            stringBuilder.append("Employee has no Vehicle Registerd");
         } else if (vehicle instanceof Car) {
             stringBuilder.append("Employee has a Car\n")
                     .append(" -Make: ").append(getVehicle().getMake())
@@ -78,15 +78,14 @@ public class CommissionBasedPartTime extends PartTime {
                     .append(" -Make: ").append(getVehicle().getMake())
                     .append("\n -Plate: ").append(getVehicle().getPlate())
                     .append("\n -Color: ").append(getVehicle().getColor())
-                    .append("\n -Distance Travelled: ").append(((Motorcycle)getVehicle()).getDistanceTravelled())
-                    ;
+                    .append("\n -Distance Travelled: ").append(((Motorcycle)getVehicle()).getDistanceTravelled());
         }
     }
 	@Override
 	public String toString() {
 		StringBuilder stringBuilder = new StringBuilder();
 		stringBuilder.append("Name: " + getName() + "\n" + "Age: " + getAge() + "\n");
-		stringBuilder.append("Employee is PartTime/ Comissioned")
+		stringBuilder.append("Employee is PartTime\\Comissioned")
 				.append("\n -Rate: " + getRate())
 				.append("\n -Hours Worked: " + getHoursWorked())
 				.append("\n -Comission: " + commissionPerc)

@@ -59,7 +59,7 @@ public class FixedBasedPartTime extends PartTime {
            StringBuilder stringBuilder = new StringBuilder();
            stringBuilder.append("Name: " + getName() + "\n" + "Age: " + getAge() + "\n");
            
-           stringBuilder.append("Employee is PartTime/ Fixed Amount")
+           stringBuilder.append("Employee is PartTime\\Fixed Amount")
                    .append("\n -Rate: " + getRate())
                    .append("\n -Hours Worked: " + getHoursWorked())
                    .append("\n -Fixed amount: " + getFixedAmount())

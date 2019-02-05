@@ -69,7 +69,7 @@ public class Intern extends Employee {
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("Name: " + getName() + "\n" + "Age: " + getAge() + "\n");
-        stringBuilder.append("Employee is Intern")
+        stringBuilder.append("Employee is an Intern")
                 .append("\n -School name: " + getSchoolName())
                 .append("\n -Earnings: " + calcEarnings()+ "\n");
     			checkVehicle(stringBuilder);

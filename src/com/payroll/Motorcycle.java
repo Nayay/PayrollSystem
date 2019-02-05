@@ -17,6 +17,6 @@ public class Motorcycle extends Vehicle{
         this.distanceTravelled = distanceTravelled;
     }
 
-    //Implement IDisplay
+    
 
 }
