@@ -1,12 +1,13 @@
 package com.payroll;
 
-
+import java.time.LocalDate;
 
 public abstract class Employee implements IPrintable {
 	private String name;
 	private int age;
 	private Vehicle vehicle;
 	private double earnings;
+	
 	
 	
 	 public double getEarnings() {
@@ -19,7 +20,7 @@ public abstract class Employee implements IPrintable {
 
 	public Employee(String name, int age, Vehicle vehicle) {
 	        this.name=name;
-	        this.age=age;
+	        this.age=calcBirthYear(age);
 	        setVehicle(vehicle);
 	    }
 	 
@@ -35,10 +36,17 @@ public abstract class Employee implements IPrintable {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	public int calcBirthYear(){
+	//Calculate Birth Year
+	public int calcBirthYear(int yearofBirth) {
+		//yearofBirth=getAge();
+		LocalDate end =  LocalDate.now();
+		int age=Integer.valueOf(end.toString().substring(0, 4))  ; 
+		age=age-yearofBirth-1;
 		return age;
-		
 	}
+	
+	
+	
 	public double calcEarnings(){
 	return this.earnings=1000;
 		
