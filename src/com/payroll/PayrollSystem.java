@@ -9,7 +9,6 @@ public class PayrollSystem {
     	 
     	 Car car=new Car("Hyundai","Black","JOT",3000.0,"4");
     	 CommissionBasedPartTime commissionBasedPartTime= new CommissionBasedPartTime("Nayay Sharma", 24, 40.0f,10.0f, 40,car);
-    	 
     	 FixedBasedPartTime fixedBased=new FixedBasedPartTime("PrabhJot Pannu",22,20.0f,9.0f,300,null);
     	 Intern intern=new Intern("Aman",21,"Lambton College",null);
     	 FullTime fullTime=new FullTime("Nayay",26,2200,1000,new Car("Hyundai","Black","JOT",3000.0,"4"));
