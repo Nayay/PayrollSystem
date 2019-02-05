@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class PayrollSystem {
 	
-	
+	public static double totalPayroll=0;
     public static void main(String []args){
     	 
     	Motorcycle bike= new Motorcycle("Ninja","Black","JOT",3000.0);
@@ -22,8 +22,12 @@ public class PayrollSystem {
          for (Employee e: employeeArrayList) {
          System.out.println("----------------------------------------------------------------------------- \n");
          System.out.println(e);
+         totalPayroll=totalPayroll+e.calcEarnings();
          }
+         System.out.println("\nTotal Payroll: "+totalPayroll+" Canadian Dollars");
     }
+    
+
 
 
 }
