@@ -1,6 +1,6 @@
 package com.payroll;
 
-	public abstract class Vehicle {
+	public abstract class Vehicle implements IPrintable{
 
 		private String make;
 		private String color;
@@ -36,6 +36,14 @@ package com.payroll;
 		public void setPlate(String plate) {
 			this.plate = plate;
 		}
-
+		@Override
+	    public String printMyData() {
+	        StringBuilder stringBuilder= new StringBuilder();
+	        stringBuilder.append("Color:").append(getColor()).append("\n");
+	        stringBuilder.append("make:").append(getMake()).append("\n");
+	        stringBuilder.append("plate:").append(getPlate()).append("\n");
+	       
+	        return String.valueOf(stringBuilder);
+	    }
 
 	}

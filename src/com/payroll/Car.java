@@ -25,7 +25,7 @@ public class Car extends Vehicle {
 		this.capacity = capacity;
 	}
 	
-	//Implement IDisplay Later
+	
 
    
 	
