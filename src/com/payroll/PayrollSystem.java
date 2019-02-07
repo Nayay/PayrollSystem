@@ -1,6 +1,7 @@
 package com.payroll;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class PayrollSystem {
 	
@@ -25,8 +26,10 @@ public class PayrollSystem {
          totalPayroll=totalPayroll+e.calcEarnings();
          }
          System.out.println("\nTotal Payroll: "+totalPayroll+" Canadian Dollars");
+         
+         
     }
-    
+	
 
 
 

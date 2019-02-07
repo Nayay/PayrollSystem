@@ -55,7 +55,7 @@ public class CommissionBasedPartTime extends PartTime {
 		if (commissionPerc > 0.0) {
 			this.commissionPerc = commissionPerc;
 		} else {
-			throw new IllegalArgumentException("Commission rate must be >0");
+			throw new IllegalArgumentException("Commission rate must be greater than zero");
 		}
 	}
 	
